@@ -18,6 +18,16 @@ yearString = str(year)
 yearLength = len(yearString)
 lastTwo = int(yearString[yearLength - 2: yearLength]) # last two digits of year
 
+def doomsday_calculation(anchorDay):
+    for _ in year:
+        if year == anchorNum.keys(2000):
+            anchorDay = days['Tuesday']
+    result = lastTwo / 12
+    remain = lastTwo % 12
+    leapYear = remain / 4
+    doomsday = result + remain + leapYear
+    print(int(doomsday))
+    
 if year < 2000: # If year is  1900- the anchor day is tuesday (The doomsday for the year 1900 is a tuesday)
     anchorDay = days['Tuesday'] # anchorDay represents the doomsday for that particular year. Ex. 1900 is a tuesday, 1901 is a wednesday
     result =  lastTwo / 12 # Finds how many times 12 goes into lastTwo (last two digits of year)
